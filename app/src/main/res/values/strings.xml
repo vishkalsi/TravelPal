@@ -15,4 +15,6 @@
     <string name="SignUp">Sign Up</string>
     <string name="Joined_Signup">Joined us before?</string>
     <string name="Login">Login</string>
+    <string name="Email">LOGIN WITH EMAIL</string>
+    <string name="hint">Password</string>
 </resources>
