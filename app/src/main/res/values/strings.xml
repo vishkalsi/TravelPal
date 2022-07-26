@@ -7,4 +7,10 @@
     <string name="forgotscreen">Forgot Password?</string>
     <string name="buttonfogotpassword">Send Reset Link</string>
     <string name="SigninBTN">Back to Sign-In</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="Signup_button">Continue</string>
+    <string name="SignUp">Sign Up</string>
 </resources>
