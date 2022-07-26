@@ -128,7 +128,7 @@
                 android:id="@+id/reg_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="25dp"
                 android:backgroundTint="@color/ButtonPrimaryColor"
                 android:text="@string/Signup_button"
                 />
@@ -137,9 +137,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:layout_gravity="center_vertical"
-
                 android:gravity="center"
                 android:orientation="horizontal"
                 >
@@ -147,13 +146,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Joined us before?">
+                    android:text="@string/Joined_Signup">
                 </TextView>
                 <Button
                     android:id="@+id/textButn_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Login"
+                    android:text="@string/Login"
                     android:textAllCaps="false"
                     android:textColor="@color/ButtonPrimaryColor"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
