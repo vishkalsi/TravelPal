@@ -18,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterUser extends AppCompatActivity {
 
-    TextInputLayout Til_Fn;
+    TextInputLayout Til_Fn,Til_Ln,Til_Email,Til_Pass;
     TextInputEditText Reg_Fn,Reg_Ln,Reg_Email,Reg_Pass;
 
 
@@ -29,6 +29,9 @@ public class RegisterUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
         Til_Fn=(TextInputLayout) findViewById(R.id.til_firstname);
+        Til_Ln=(TextInputLayout) findViewById(R.id.til_lastname);
+        Til_Email=(TextInputLayout) findViewById(R.id.til_email);
+        Til_Pass=(TextInputLayout) findViewById(R.id.til_password);
         Reg_Fn=(TextInputEditText) findViewById(R.id.reg_firstname);
         Reg_Ln=(TextInputEditText)findViewById(R.id.reg_lastname);
         Reg_Email=(TextInputEditText)findViewById(R.id.reg_email);
@@ -47,19 +50,26 @@ public class RegisterUser extends AppCompatActivity {
         Reg_User.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String first_name=Reg_Fn.getText().toString().trim();
                 String last_name=Reg_Ln.getText().toString().trim();
                 String email=Reg_Email.getText().toString().trim();
                 String password=Reg_Pass.getText().toString().trim();
 
 
-
-               ValidateFirstName(first_name);
-
-                if(first_name.equals("Aman")&&last_name.equals("Kumar")&&email.equals("Aman@")&&password.equals("123"))
+                if(!ValidateFirstName(first_name) | !ValidateLastName(last_name) | !ValidateEmail(email) | !ValidatePassword(password) )
                 {
-                    Toast.makeText(RegisterUser.this,"Login Done",Toast.LENGTH_LONG).show();
+                return;
+
                 }
+                else
+                {
+                    Intent intent =new Intent(getApplicationContext(),Login.class);
+                    startActivity(intent);
+                }
+
+
+
 
             }
         });
@@ -73,6 +83,7 @@ public class RegisterUser extends AppCompatActivity {
 
     public boolean ValidateFirstName(String first_name)
     {
+
         if(first_name.isEmpty())
         {
             Til_Fn.setError("Error");
@@ -87,14 +98,47 @@ public class RegisterUser extends AppCompatActivity {
 
     public boolean ValidateLastName(String last_name)
     {
+
         if(last_name.isEmpty())
         {
-            Til_Fn.setError("Error");
+            Til_Ln.setError("Error");
             return false;
         }
         else
         {
-            Til_Fn.setError(null);
+            Til_Ln.setError(null);
+            return true;
+        }
+    }
+    public boolean ValidateEmail(String email)
+    {
+
+        if(email.isEmpty())
+        {
+            Til_Email.setError("Error");
+            return false;
+        }
+        else
+        {
+            Til_Email.setError(null);
+            return true;
+        }
+    } public boolean ValidatePassword(String password)
+    {
+
+        if(password.isEmpty())
+        {
+            Til_Pass.setError("Error");
+            return false;
+        }
+        else if(password.length()<8)
+        {
+            Til_Pass.setError("Should be atleast 8 characters");
+            return false;
+        }
+        else
+        {
+            Til_Pass.setError(null);
             return true;
         }
     }
