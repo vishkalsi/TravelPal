@@ -9,8 +9,8 @@
         <dimen name="margin">0dp</dimen>
         <dimen name="marginbottom">184dp</dimen>
         <dimen name="margins">10dp</dimen>
-        <dimen name="txtsizes">25dp</dimen>
-        <dimen name="txtsizs">20dp</dimen>
+
+
         <dimen name="margns">36dp</dimen>
         <dimen name="marginEnd">32dp</dimen>
         <dimen name="txtsizss">20dp</dimen>
