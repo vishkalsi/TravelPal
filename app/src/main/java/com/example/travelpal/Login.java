@@ -33,4 +33,10 @@ public class Login extends AppCompatActivity {
         });
 
     }
+
+    //Disable Back
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
 }
