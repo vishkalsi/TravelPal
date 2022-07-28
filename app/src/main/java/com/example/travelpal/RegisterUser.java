@@ -139,7 +139,7 @@ public class RegisterUser extends AppCompatActivity {
         else
         {
             Til_Pass.setError(null);
-            return true;
+            return false;
         }
     }
 
