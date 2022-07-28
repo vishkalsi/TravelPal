@@ -2,14 +2,16 @@ package com.example.travelpal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+
 
 public class Login extends AppCompatActivity {
 
+    Button SignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,7 @@ public class Login extends AppCompatActivity {
        // TextView textUsername = (TextView) findViewById(R.id.textUsername);
         //TextView textPassword = (TextView) findViewById(R.id.textPassword);
 
-//        Button loginBtn = (Button) findViewById(R.id.loginBtn);
+       SignUp = (Button) findViewById(R.id.textBtn_Signup);
 //
 //        loginBtn.setOnClickListener(new View.OnClickListener(){
 //
@@ -34,9 +36,16 @@ public class Login extends AppCompatActivity {
 
     }
 
+    public void SignUp(View v)
+    {
+        Intent intent=new Intent(getApplicationContext(),RegisterUser.class);
+        startActivity(intent);
+    }
+
     //Disable Back
     @Override
     public void onBackPressed() {
         moveTaskToBack(true);
     }
+
 }
