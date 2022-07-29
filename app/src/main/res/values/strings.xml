@@ -4,7 +4,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="MainText">Your Travel Support Pal</string>
-    <string name="forgot_Password">Forgot Password?</string>
+    <string name="forgotscreen">Forgot Password?</string>
     <string name="buttonfogotpassword">Send Reset Link</string>
     <string name="SigninBTN">Back to Sign-In</string>
     <string name="first_name">First Name</string>
@@ -15,12 +15,24 @@
     <string name="SignUp">Sign Up</string>
     <string name="Joined_Signup">Joined us before?</string>
     <string name="Login">Login</string>
-    <string name="Email_Login">LOGIN WITH EMAIL</string>
+    <string name="Email">LOGIN WITH EMAIL</string>
     <string name="hint">Password</string>
-    <string name="CapLog">LOGIN</string>
-    <string name="SignAccount">Sign in your account</string>
-    <string name="user_name">User Name</string>
-    <string name="Or">OR</string>
-    <string name="AccountDont">Don\'t have any account?</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tagline">Your Travel Support Pal</string>
+    <string name="homeicon">Home Feed</string>
+    <string name="searchicon">Search Feed</string>
+    <string name="notificationicon">Notification Screen</string>
+    <string name="profileicon">Profile Screen</string>
+    <string name="travelpal">TravelPal</string>
+    <string name="global">Global</string>
+    <string name="following">Following</string>
+    <string name="cardView">Joe is in Manitoba</string>
 </resources>
