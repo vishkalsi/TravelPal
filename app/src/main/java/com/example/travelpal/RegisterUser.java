@@ -60,7 +60,6 @@ public class RegisterUser extends AppCompatActivity {
                 if(!ValidateFirstName(first_name) | !ValidateLastName(last_name) | !ValidateEmail(email) | !ValidatePassword(password) )
                 {
                 return;
-
                 }
                 else
                 {
@@ -142,7 +141,6 @@ public class RegisterUser extends AppCompatActivity {
             return false;
         }
     }
-
 
 
 
