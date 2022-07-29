@@ -11,7 +11,9 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13728470111448834" />
         <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="app/src/main/res/layout/forgotpassword.xml" value="0.16621376811594202" />
+        <entry key="app/src/main/res/layout/splash.xml" value="0.165" />
       </map>
     </option>
   </component>
