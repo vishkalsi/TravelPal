@@ -214,13 +214,23 @@
                     app:layout_constraintStart_toStartOf="@+id/imageView"
                     app:layout_constraintTop_toBottomOf="@+id/imageView"
                     tools:ignore="MissingConstraints" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/cardView"
-                    android:textAppearance="?attr/textAppearanceHeadline6" />
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/cardView"
+                        android:textAppearance="?attr/textAppearanceHeadline6" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Active at 4:41 a.m"
+                        android:textStyle="italic"/>
+
+                </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
                     style="?attr/borderlessButtonStyle"
@@ -258,7 +268,7 @@
                     android:text="2300 Likes"
                     android:textAlignment="textStart"
                     android:textColor="@color/black"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"/>
 
                 <com.google.android.material.button.MaterialButton
                     style="?attr/borderlessButtonStyle"
