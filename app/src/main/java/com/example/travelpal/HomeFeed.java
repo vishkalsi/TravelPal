@@ -10,5 +10,6 @@ public class HomeFeed extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_feed);
+//        change1
     }
 }
