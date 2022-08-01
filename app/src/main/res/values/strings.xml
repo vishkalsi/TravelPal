@@ -23,6 +23,12 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="CapLog">Logs</string>
+    <string name="SignAccount">Sign In</string>
+    <string name="user_name">User Name</string>
+    <string name="forgot_Password">Forgot Password?</string>
+    <string name="Email_Login">Email</string>
+    <string name="AccountDont">Account Dont</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
