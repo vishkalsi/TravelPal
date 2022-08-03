@@ -1,129 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="675dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/bottom_navigation_menu">
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            app:itemRippleColor="@color/black"
+            app:itemTextColor="@color/app_blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            android:backgroundTint="#4275F1"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" >
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            app:menu="@menu/bottom_navigation_menu">
 
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:src="@drawable/navigation"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.134"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-                app:layout_constraintVertical_bias="0.0" />
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="270dp"
-                android:textAlignment="center"
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight=".70"
-                android:text="@string/travelpal"
-                android:textColor="@color/white"
-                android:textSize="34dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/appBarLayout"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="35dp"
-                android:src="@drawable/filter"
-                app:layout_constraintBottom_toBottomOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/appBarLayout" />
-        </androidx.appcompat.widget.Toolbar>
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/app_name"
+                app:layout_anchor="@id/bottom_navigation"
+                app:srcCompat="@android:drawable/ic_input_add" />
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_navigation">
+
+        </FrameLayout>
 
 
 
-    <Button
-        android:id="@+id/Global"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.0"
-        android:text="@string/global"
-        android:textSize="20dp"
-        android:paddingVertical="2dp"
-        android:layout_marginLeft="8dp"
-        android:backgroundTint="#ff0000"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        />
+<!--        <Button-->
+<!--            android:id="@+id/Global"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"-->
+<!--            app:layout_constraintVertical_bias="0.0"-->
+<!--            android:text="@string/global"-->
+<!--            android:textSize="20dp"-->
+<!--            android:paddingVertical="2dp"-->
+<!--            android:layout_marginLeft="8dp"-->
+<!--            android:backgroundTint="#ff0000"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textStyle="bold"-->
+<!--            />-->
 
-    <Button
-        android:id="@+id/Following"
-        android:layout_width="180dp"
-        android:layout_height="50dp"
-        android:paddingVertical="2dp"
-        android:text="@string/following"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="#ffffff"
-        android:layout_marginRight="8dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.0" />
-
-
+<!--        <Button-->
+<!--            android:id="@+id/Following"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:paddingVertical="2dp"-->
+<!--            android:text="@string/following"-->
+<!--            android:textSize="20dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:backgroundTint="#ffffff"-->
+<!--            android:layout_marginRight="8dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textStyle="bold"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>
